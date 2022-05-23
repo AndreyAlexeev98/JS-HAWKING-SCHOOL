@@ -1,0 +1,14 @@
+{
+  "name": "js-hawking-school",
+  "version": "1.0.0",
+  "description": "",
+  "main": "homework-1.js",
+  "scripts": {
+    "test": "nodemon testClasses.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
