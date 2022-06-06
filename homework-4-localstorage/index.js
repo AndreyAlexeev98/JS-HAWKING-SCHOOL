@@ -12,3 +12,27 @@ https://ru.hexlet.io/blog/posts/lokalnoe-hranilische-vs-sessionnoe-hranilische-v
 https://developer.mozilla.org/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
 
 */
+
+let btn = document.getElementById('btn');
+let wrapper = document.getElementById('wrapper');
+
+
+// логика смены темы
+
+btn.addEventListener('click', () => {
+  wrapper.classList.toggle("dark-theme");
+  if(wrapper.classList.contains('dark-theme')) {
+    localStorage.setItem('dark-theme', 'true');
+  } else {
+    localStorage.setItem('dark-theme', 'false');
+  }
+})
+
+// логика проверки выбранной ранее темы при загрузке страницы
+
+window.addEventListener('DOMContentLoaded', function(){
+  let wrapper = document.getElementById('wrapper');
+  if(localStorage.getItem('dark-theme') === 'true'){
+    wrapper.classList.add("dark-theme");
+  }
+});
